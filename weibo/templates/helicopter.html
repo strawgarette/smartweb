@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>智能实验室控制平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./static/strawberry/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="./static/strawberry/custom.min.css">
+    <script>
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+  </head>
+  <script src="/static/jquery.min.js">
+  </script>
+ <script>
+     $(document).ready(function(){
+          $(".btn0").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME":"DOOR1","STATUS":"1"});
+          });
+      
+          $(".btn1").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME": "DOOR1", 'STATUS':'0'});
+          });
+    
+    
+    
+     
+          $(".plug_base10").click(function(){
+               $.post("http://0.0.0.0/control_data", {"NAME": "plug_base1", 'STATUS': '3E 1A B1'});
+          }); 
+    
+          $(".plug_base11").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME": "plug_base1", 'STATUS': '3E 1A A1'});
+          }); 
+    
+     
+          $(".plug_base20").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME": "plug_base2", 'STATUS': '3E 1A B2'});
+          }); 
+    
+          $(".plug_base21").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME": "plug_base2", 'STATUS': '3E 1A A2'});
+          }); 
+    
+    
+    
+           
+           $(".plug_base30").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME": "plug_base3", 'STATUS': '3E 1A B4'});
+          }); 
+    
+          $(".plug_base31").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME": "plug_base3", 'STATUS': '3E 1A A4'});
+          }); 
+    
+     
+          $(".plug_base40").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME": "plug_base4", 'STATUS': '3E 1A B8'});
+          }); 
+    
+          $(".plug_base41").click(function(){
+              $.post("http://0.0.0.0/control_data", {"NAME": "plug_base4", 'STATUS': '3E 1A A8'});
+          }); 
+    
+    
+    
+      });   
+    
+    
+    
+    
+    
+  </script>
+  
+<body>
+ 
+    <table align="center">
+    <tr align="center">
+      <td align="center">
+      <button type="button" style="width:300px;height:200px;" class="btn btn-outline-warning plug_base10"><h4>Up</h4></button>
+    </td>
+    </tr>
+    </table>
+    <br/>
+        <table align="center">
+            <tr>
+                <td><button type="button" style="width:300px;height:200px;" class="btn btn-outline-primary plug_base11"><h4>Right</h4></button></td>
+                <td>&nbsp;&nbsp;&nbsp;</td> 
+              <td><button type="button" style="width:300px;height:200px;" class="btn btn-outline-success plug_base20"><h4>Left</h4></button></td>
+              <td>&nbsp;&nbsp;&nbsp;</td> 
+              <td><button type="button" style="width:300px;height:200px;" class="btn btn-outline-info plug_base21"><h4>Down</h4></button></td>
+            </tr>
+            </table>
+            <br/>
+            
+           
+            </body>
+
+

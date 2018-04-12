@@ -1,0 +1,263 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>智能实验室控制平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./static/strawberry/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="./static/strawberry/custom.min.css">
+    <script>
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+
+
+
+  </head>
+  
+  
+  
+  <script src="/static/jquery.min.js">
+  </script>
+  
+
+  <script>
+      $(document).ready(function(){
+          $(".btn0").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME":"DOOR1","STATUS":"1"});
+          });
+      
+          $(".btn1").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME": "DOOR1", 'STATUS':'0  '});
+          });
+    
+    
+    
+     
+          $(".plug_base10").click(function(){
+               $.post("http://119.23.237.255/control_data", {"NAME": "plug_base1", 'STATUS': '3E 1A A1'});
+          }); 
+    
+          $(".plug_base11").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME": "plug_base1", 'STATUS': '3E 1A B1'});
+          }); 
+    
+     
+          $(".plug_base20").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME": "plug_base2", 'STATUS': '3E 1A A2'});
+          }); 
+    
+          $(".plug_base21").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME": "plug_base2", 'STATUS': '3E 1A B2'});
+          }); 
+    
+    
+    
+           
+           $(".plug_base30").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME": "plug_base3", 'STATUS': '3E 1A A4'});
+          }); 
+    
+          $(".plug_base31").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME": "plug_base3", 'STATUS': '3E 1A B4'});
+          }); 
+    
+     
+          $(".plug_base40").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME": "plug_base4", 'STATUS': '3E 1A A8'});
+          }); 
+    
+          $(".plug_base41").click(function(){
+              $.post("http://119.23.237.255/control_data", {"NAME": "plug_base4", 'STATUS': '3E 1A B8'});
+          }); 
+    
+    
+    
+      });   
+    
+    </script>
+    
+  <body>
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <div class="container">
+        <a href="../" class="navbar-brand">返回首页</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              
+              <div class="dropdown-menu" aria-labelledby="themes">
+                <a class="dropdown-item" href="../default/">Default</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../cerulean/">Cerulean</a>
+                <a class="dropdown-item" href="../cosmo/">Cosmo</a>
+                <a class="dropdown-item" href="../cyborg/">Cyborg</a>
+                <a class="dropdown-item" href="../darkly/">Darkly</a>
+                <a class="dropdown-item" href="../flatly/">Flatly</a>
+                <a class="dropdown-item" href="../journal/">Journal</a>
+                <a class="dropdown-item" href="../litera/">Litera</a>
+                <a class="dropdown-item" href="../lumen/">Lumen</a>
+                <a class="dropdown-item" href="../lux/">Lux</a>
+                <a class="dropdown-item" href="../materia/">Materia</a>
+                <a class="dropdown-item" href="../minty/">Minty</a>
+                <a class="dropdown-item" href="../pulse/">Pulse</a>
+                <a class="dropdown-item" href="../sandstone/">Sandstone</a>
+                <a class="dropdown-item" href="../simplex/">Simplex</a>
+                <a class="dropdown-item" href="../sketchy/">Sketchy</a>
+                <a class="dropdown-item" href="../slate/">Slate</a>
+                <a class="dropdown-item" href="../solar/">Solar</a>
+                <a class="dropdown-item" href="../spacelab/">Spacelab</a>
+                <a class="dropdown-item" href="../superhero/">Superhero</a>
+                <a class="dropdown-item" href="../united/">United</a>
+                <a class="dropdown-item" href="../yeti/">Yeti</a>
+              </div>
+            </li>
+            <li class="nav-item">
+             
+            </li>
+            <li class="nav-item">
+             
+            </li>
+            <li class="nav-item dropdown">
+              
+              <div class="dropdown-menu" aria-labelledby="download">
+                
+              </div>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#" >快速返回顶部</a>
+            </li>
+            <li class="nav-item">
+              
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Welcome to intelligent lab120!</h1>
+            <p class="lead">Here we will show you the amazing world under the operation from lab120,<br/>may our endeavor and accomplishment bring you surprise!</p>
+          </div>
+        
+        </div>
+      </div>
+<table>
+      <tr>
+        <td>
+            <a href="#1"><div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Door</div>
+                <div class="card-body">
+                  <h4 class="card-title">Magic Door</h4>
+                  <p class="card-text">To enter our lab world,the first question is opening the door. Fortunate as you,when you are looking through this webpage,only one step that you click the button below can control the switch of the lab door.Enjoy the feeling of remote control.</p>
+                </div>
+              </div></a>
+      </td>
+
+
+
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <!-- <td><a href="#2"><div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+            <div class="card-header">Socket</div>
+            <div class="card-body">
+              <h4 class="card-title">Delicate Socket</h4>
+              <p class="card-text">After you get into lab120,the most well-marked work socket must come into your sight.It is simple, but isn't ordinary.Every module and wire was fitted scrupulously by members in lab120.<br/><br/> </p>
+            </div>
+          </div></a>
+        </td> -->
+
+
+
+        </tr>
+
+
+
+        </table>
+      
+          <br/>
+          <img src={{link}}  alt="门禁监控" />
+          <hr color="white"/>
+          
+              <a name="1"><font color="white"><h1 id="buttons">Door</h1></font></a>
+              
+              <table>
+                <tr>
+                  <p class="bs-component">
+                    
+                    <td><button type="button" style="width:300px;height:300px;"  class="btn0 btn btn-success"><font color="black"><h1><Option>Open</Option></h1></font></button></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td><button type="button" style="width:300px;height:300px;"class="btn btn-primary btn1"><font color="black"><h1>Close</h1></font></button></td>
+                    
+                  </p>
+                </tr>
+                </table>
+
+
+<!--                 
+                  <hr color="white"/>
+                  <a name="2"><font color="white"><h1 id="buttons">Socket</h1></font></a>
+                <table>
+                <tr>
+                  <td><button type="button" style="width:400px;height:300px;" class="btn btn-outline-success plug_base10"><h4>Open the first switch</h4></button></td>
+                  <td>&nbsp;&nbsp;&nbsp;</td>
+                  <td><button type="button" style="width:400px;height:300px;" class="btn btn-outline-primary plug_base11"><h4>Close the first switch</h4></button></td>
+                </tr>
+                </table>
+                <br/>
+                <table>
+                    <tr>
+                      <td><button type="button" style="width:400px;height:300px;" class="btn btn-outline-success plug_base20"><h4>Open the second switch</h4></button></td>
+                      <td>&nbsp;&nbsp;&nbsp;</td>
+                      <td><button type="button" style="width:400px;height:300px;" class="btn btn-outline-primary plug_base21"><h4>Close the second switch</h4></button></td>
+                    </tr>
+                    </table>
+                    <br/>
+                    <table>
+                        <tr>
+                          <td><button type="button" style="width:400px;height:300px;" class="btn btn-outline-success plug_base30"><h4>Open the third switch</h4></button></td>
+                          <td>&nbsp;&nbsp;&nbsp;</td>
+
+                          <td><button type="button" style="width:400px;height:300px;" class="btn btn-outline-primary plug_base31"><h4>Close the third switch</h4></button></td>
+                        </tr>
+                        </table>
+                        <br/>
+                        <table>
+                            <tr>
+                              <td><button type="button" style="width:400px;height:300px;" class="btn btn-outline-success plug_base40"><h4>Open the fourth switch</h4></button></td>
+                              <td>&nbsp;&nbsp;&nbsp;</td>
+                              <td><button type="button" style="width:400px;height:300px;" class="btn btn-outline-primary plug_base41"><h4>Close the fourth switch</h4></button></td>
+                            </tr>
+                            </table>
+          
+      
+             -->

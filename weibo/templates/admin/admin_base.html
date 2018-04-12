@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/admin.css') }}">
+{% block head_title %}
+<title>智能实验室后台</title>
+{% endblock %}
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="col-md-3">
+    <!-- 左侧的菜单 -->
+    <div class="list-group">
+      <a href="{{ url_for('admin_index') }}" class="list-group-item {% if menu_no == 'index' %}active{% endif %}">
+        后台首页
+      </a>
+      <a href="{{ url_for('admin_users') }}" class="list-group-item {% if menu_no == 'users' %}active{% endif %}">用户管理</a>
+      <a href="{{ url_for('face_record') }}" class="list-group-item {% if menu_no == 'face_record' %}active{% endif %}">考勤记录</a>
+    </div>
+  </div>
+  <div class="col-md-9 admin-right">
+    <!-- 右侧内容 -->
+    {% block breadcrumb %}
+    <ol class="breadcrumb">
+      <li><a href="{{ url_for('admin_index') }}">后台首页</a></li>
+      <li class="active">用户管理</li>
+    </ol>
+    {% endblock %}
+    {% block right_content %}
+    {% endblock %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>智能实验室控制平台</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css', _external=True) }}">
+</head>
+
+
+<script src="/static/jquery.min.js">
+</script>
+
+
+<script>
+  $(document).ready(function(){
+      $(".btn0").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME":"DOOR1","STATUS":"3E 1A B1"});
+      });
+  
+      $(".btn1").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME": "DOOR1", 'STATUS': '3E 1A A1'});
+      });
+
+
+
+ 
+      $(".plug_base10").click(function(){
+           $.post("http://119.23.237.255/control_data", {"NAME": "plug_base1", 'STATUS': '3E 1A A1'});
+      }); 
+
+      $(".plug_base11").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME": "plug_base1", 'STATUS': '3E 1A B1'});
+      }); 
+
+ 
+      $(".plug_base20").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME": "plug_base2", 'STATUS': '3E 1A A2'});
+      }); 
+
+      $(".plug_base21").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME": "plug_base2", 'STATUS': '3E 1A B2'});
+      }); 
+
+
+
+       
+       $(".plug_base30").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME": "plug_base3", 'STATUS': '3E 1A A4'});
+      }); 
+
+      $(".plug_base31").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME": "plug_base3", 'STATUS': '3E 1A B4'});
+      }); 
+
+ 
+      $(".plug_base40").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME": "plug_base4", 'STATUS': '3E 1A A8'});
+      }); 
+
+      $(".plug_base41").click(function(){
+          $.post("http://119.23.237.255/control_data", {"NAME": "plug_base4", 'STATUS': '3E 1A B8'});
+      }); 
+
+
+
+  });   
+
+</script>
+
+
+
+
+
+<h1>智能实验室控制平台</h1>
+
+<body>
+  <button class="btn0">开</button>
+  <button class="btn1">关</button>
+  <br>
+
+  <button class="plug_base11">开</button>
+  <button class="plug_base10">关</button>
+  <br>
+
+  <button class="plug_base21">开</button>
+  <button class="plug_base20">关</button>
+  <br>
+
+  <button class="plug_base31">开</button>
+  <button class="plug_base30">关</button>
+  <br>
+
+  <button class="plug_base41">开</button>
+  <button class="plug_base40">关</button>
+  <br>
+
+</body> 
+
+</html>
