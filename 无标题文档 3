@@ -1,0 +1,10 @@
+git clone 
+
+
+1.在仓库中打开终端  2.enter the root
+git pull
+git status
+git add -A
+git status
+git commit -m "the first use git"
+git push
